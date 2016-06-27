@@ -32,14 +32,13 @@ public class ObjectActivity extends AppCompatActivity {
 
 
                 if(passCode.getText().toString().equals("123")) {
-
+                    passCode.setText("");
                     Intent i = new Intent(v.getContext(),DetailedActivity.class);
                     startActivity(i);
 
-                    //tV.setText("Welcome!");
-                    //tV.setTextColor(Color.parseColor("#64dd17"));
                 }
                 else {
+                    passCode.setText("");
                    tV.setText("Wrong passcode! Please try again.");
                    tV.setTextColor(Color.parseColor("#ff4400"));
                 }

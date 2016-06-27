@@ -30,13 +30,14 @@ public class DetailedActivity extends Activity {
         mB.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if(backCode.getText().toString().equals("Back")) {
-
-                    Intent i = new Intent(v.getContext(),ObjectActivity.class);
+                if(backCode.getText().toString().equals("012345")) {
+                    backCode.setText("");
+                    Intent i = new Intent(v.getContext(),PatientInfoActivity.class);
                     startActivity(i);
 
                 }
                 else {
+                    backCode.setText("");
 
                 }
             }
