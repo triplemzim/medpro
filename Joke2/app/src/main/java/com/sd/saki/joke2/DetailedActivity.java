@@ -35,12 +35,9 @@ public class DetailedActivity extends Activity {
                     Intent i = new Intent(v.getContext(),ObjectActivity.class);
                     startActivity(i);
 
-                    //tV.setText("Welcome!");
-                    //tV.setTextColor(Color.parseColor("#64dd17"));
                 }
                 else {
-                    tV.setText("Wrong passcode!\nPlease type 'Back' and press the button" );
-                    tV.setTextColor(Color.parseColor("#ff9800"));
+
                 }
             }
         });

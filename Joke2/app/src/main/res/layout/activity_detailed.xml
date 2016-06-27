@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome!\nType 'Back' and press the button"
+        android:text="Welcome!\nUse the search box to view details of patients\nUse the '+' button to create a new patient profile"
         android:textSize="24dp"
         android:textAlignment="center"
         android:id="@+id/detailText"
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:id="@+id/myButton"
-        android:text="Go Back"
+        android:text="Search"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="#007860"
@@ -35,7 +35,18 @@
         android:textColor="#007860"
         />
 
-
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="+"
+        android:id="@+id/newPatient"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/roundbutton"/>
 
 
 </RelativeLayout>
