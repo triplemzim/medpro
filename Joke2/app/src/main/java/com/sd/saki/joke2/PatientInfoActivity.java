@@ -10,6 +10,6 @@ public class PatientInfoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patientinfo);
+        setContentView(R.layout.testgridlayout);
     }
 }
