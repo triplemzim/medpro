@@ -14,7 +14,7 @@
     <Button
         android:text="Login"
         android:id="@+id/myButton"
-        android:background="#007860"
+        android:background="@drawable/prettybutton"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:padding="20dp"

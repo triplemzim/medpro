@@ -21,7 +21,8 @@
         android:text="Search"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="#007860"
+
+        android:background="@drawable/prettybutton"
         android:textColor="#ffffff"
         android:padding="20dp"/>
 
