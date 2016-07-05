@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.genericslab.droidplate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Allows Digits to pre-fill the phone number therefore making the login process easier -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Allows Digits to read the SMS pin therefore making the login process easier -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <!-- Fabric configuration -->
+        <!-- CONFIG: Change fabric API key  -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f" />
+
+        <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.common.MoPubBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- Facebook configuration -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook.appId"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity android:name=".ui.drawer.DrawerActivity_" />
+        <activity
+            android:name=".ui.login.DPSignInActivity_"/>
+
+        <service
+            android:name=".helper.location.FetchAddressIntentService"
+            android:exported="false" />
+
+        <activity android:name=".util.StorageErrorActivity_"></activity>
+    </application>
+
+</manifest>

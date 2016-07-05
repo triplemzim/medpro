@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Droid.Theme">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.BrandedLaunch">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+</resources>
