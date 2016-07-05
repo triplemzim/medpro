@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#e1edf9"
-    tools:context="com.sd.saki.joke2.ObjectActivity">
+    tools:context="com.sd.saki.MedPro.ObjectActivity">
 
 
     <Button

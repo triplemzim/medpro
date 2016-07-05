@@ -1,4 +1,4 @@
-package com.sd.saki.joke2;
+package com.sd.saki.MedPro;
 
 import org.junit.Test;
 
