@@ -1,4 +1,4 @@
-package com.sd.saki.joke2;
+package com.sd.saki.MedPro;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
