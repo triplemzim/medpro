@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="None">
+    </style>
+
+    <style name="Droid.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="selectableItemBackground">@drawable/selectable_item_background</item>
+        <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
+        <item name="android:windowBackground">@color/bg.window</item>
+        <item name="colorButtonNormal">@color/button.normal</item>
+        <item name="android:textColorPrimary">@color/text.primary</item>
+        <item name="android:textColorSecondary">@color/text.secondary</item>
+        <item name="android:textColorLink">@color/text.link</item>
+        <item name="android:buttonStyle">@style/Droid.Theme.Button.Default</item>
+    </style>
+
+    <style name="Droid.Theme.Button.Default" parent="@android:style/Widget.Button">
+        <item name="android:minHeight">@dimen/height.min.button</item>
+        <item name="android:minWidth">@dimen/width.min.button</item>
+        <item name="android:background">@drawable/color_button_default</item>
+    </style>
+
+    <style name="Droid.Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Droid.Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Droid.Theme.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Droid.Theme.FabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin.4</item>
+        <item name="android:src">@drawable/ic_add_black_24dp</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="rippleColor">@android:color/white</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,161 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode "${versionMajor}".toInteger() * 10000 + "${versionMinor}".toInteger() * 100 + "${versionPatch}".toInteger() * 10 + "${versionBuild}".toInteger();
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
+
+        buildConfigField "String", project.KEY_GIT_SHA, "\"${gitSha}\""
+        buildConfigField "String", project.KEY_BUILD_TIME, "\"${buildTime}\""
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+        release {
+            debuggable false
+            // RELEASE: use proguard, minifyEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        abortOnError false
+        textReport true
+        textOutput 'stdout'
+        fatal 'UnusedResources'
+    }
+
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    /**
+     * =================== Support libraries ===================
+     */
+    compile "com.android.support:support-v4:$supportVersion"
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:design:$supportVersion"
+    compile "com.android.support:recyclerview-v7:$supportVersion"
+    compile "com.android.support:gridlayout-v7:$supportVersion"
+    compile "com.android.support:cardview-v7:$supportVersion"
+    compile "com.android.support:palette-v7:$supportVersion"
+    compile "com.android.support:multidex:$multiDexVersion"
+
+    // =================== Google play services ===================
+    // https://developers.google.com/android/guides/setup
+    compile "com.google.android.gms:play-services-location:$gsmVersion"
+
+    // https://github.com/excilys/androidannotations
+    apt "org.androidannotations:androidannotations:$annotationsVersion"
+    compile "org.androidannotations:androidannotations-api:$annotationsVersion"
+
+    // =================== UI ===================
+    // https://github.com/chrisjenx/Calligraphy
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0@aar'
+    // http://joanzapata.com/android-iconify/
+    compile "com.joanzapata.iconify:android-iconify-fontawesome:$iconifyVersion"
+
+    compile "com.github.bumptech.glide:glide:$glideVersion"
+    compile "com.github.bumptech.glide:okhttp-integration:1.3.1"
+
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+    /**
+     * =================== Debug/ Log ===================
+     */
+    // https://github.com/orhanobut/logger
+    compile 'com.orhanobut:logger:1.11'
+    // https://github.com/square/leakcanary
+    // compile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    // RELEASE: uncomment this and comment out the former one
+    // compile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    // http://facebook.github.io/stetho/
+    // compile "com.facebook.stetho:stetho:$stethoVersion"
+    //compile "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
+
+    /**
+     * =================== Fabric ===================
+     */
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
+    compile('com.digits.sdk.android:digits:1.9.2@aar') {
+        transitive = true;
+    }
+    compile('com.mopub.sdk.android:mopub:4.2.0@aar') {
+        transitive = true;
+    }
+
+    /**
+     * =================== Event ===================
+     */
+    compile "org.greenrobot:eventbus:$eventbusVersion"
+
+    /**
+     * =================== Data storage ===================
+     */
+    // realm.io/docs/java/latest/
+    compile 'io.realm:realm-android:0.87.3'
+
+    /**
+     * =================== Utility ===================
+     */
+    compile 'com.google.code.gson:gson:2.5'
+
+
+    /**
+     * =================== Social integration ===================
+     */
+    // http://mvnrepository.com/artifact/com.facebook.android/facebook-android-sdk
+    compile 'com.facebook.android:facebook-android-sdk:4.9.0'
+
+    /**
+     * =================== Networking ===================
+     */
+    // http://square.github.io/retrofit/
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        // you should set your package name here if you are using different application IDs
+        // resourcePackageName "your.package.name"
+
+        // RELEASE: false
+        trace 'true'
+        library true
+    }
+}
+
+// Acknowledgement
+// https://github.com/vlonjatg/progress-activity
+
+// RELEASE: Image compression with Image-Optim
