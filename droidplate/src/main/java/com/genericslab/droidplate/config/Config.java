@@ -7,9 +7,9 @@ import com.genericslab.droidplate.R;
  */
 public class Config {
 
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
 
-    public static final boolean FILL_DATA = false;
+    public static final boolean FILL_DATA = true;
 
     public static final boolean SECRET_BUILD = false;
 
