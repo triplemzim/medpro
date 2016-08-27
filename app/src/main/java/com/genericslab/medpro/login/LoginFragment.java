@@ -5,6 +5,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 
 import com.genericslab.droidplate.CoreFragment;
+import com.genericslab.droidplate.ui.drawer.DrawerActivity_;
 import com.genericslab.medpro.R;
 
 import org.androidannotations.annotations.AfterViews;
@@ -38,7 +39,7 @@ public class LoginFragment extends CoreFragment {
 
             @Override
             public void onLogin(TextInputLayout loginUser, TextInputLayout loginPass) {
-
+                DrawerActivity_.intent(getContext()).start();
             }
         });
     }
