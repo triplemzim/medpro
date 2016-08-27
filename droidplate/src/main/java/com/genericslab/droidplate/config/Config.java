@@ -35,7 +35,7 @@ public class Config {
 
     public static final int NETWORK_DELAY_SECONDS = 3;
 
-    public static final String HOME_ACTIVITY = "com.genericslab.medpro.ui.HomeActivity_";
+    public static final String HOME_ACTIVITY = "com.genericslab.droidapp.HomeActivity_";
 
     // Calligraphy - custom fonts
     public static final int DEFAULT_FONT_PATH_RES = R.string.fonts_noto_sans_regular;
