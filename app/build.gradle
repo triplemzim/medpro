@@ -31,6 +31,7 @@ android {
 repositories {
     jcenter()
     maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -38,6 +39,7 @@ dependencies {
     testCompile "junit:junit:$junitVersion"
 
     compile project(':droidplate')
+    compile 'com.github.shem8:material-login:1.4.0'
 
     apt "org.androidannotations:androidannotations:$annotationsVersion"
 }

@@ -4,8 +4,8 @@ import android.os.Bundle;
 
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.config.Config;
-import com.genericslab.droidplate.ui.login.DPSignInActivity_;
 import com.genericslab.medpro.R;
+import com.genericslab.medpro.login.LoginFragment_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -28,7 +28,6 @@ public class MainActivity extends CoreActivity {
     @Trace(tag = TRACE_TAG)
     @AfterViews
     void afterViews() {
-        DPSignInActivity_.intent(this).start();
-        finish();
+        loadFragment(LoginFragment_.builder().build());
     }
 }
