@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/medpro_logo"
+        />
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/EditTextPatientName"
+        android:hint="@string/hint.enterFullName"
+        android:inputType="textPersonName"
+        />
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/ButtonSearchByName"
+        android:text="@string/label.search"
+        android:background="@color/primary"
+        />
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/EditTextPatientPhone"
+        android:hint="@string/hint.enterPhoneNumber"
+        android:inputType="number"
+        />
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/ButtonSearchByPhone"
+        android:text="@string/label.search"
+        android:background="@color/primary"
+        />
+
+    <Button
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/ButtonRegisterPatient"
+        android:text="@string/label.registerNew"
+        android:background="@color/material.core.lime"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/ButtonShowAll"
+        android:text="@string/label.showAll"
+        android:background="@color/material.flat.peterriver"
+        />
+
+</LinearLayout>
