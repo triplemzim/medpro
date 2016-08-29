@@ -4,8 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
+    <TextView
         android:layout_marginTop="40dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label.allPatients"/>
+
+    <ListView
         android:id="@+id/patientList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>

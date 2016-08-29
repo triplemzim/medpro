@@ -6,4 +6,9 @@
     <string name="label.search">Search</string>
     <string name="label.showAll">Show All Patients</string>
     <string name="label.registerNew">Register New Patient</string>
+    <string name="label.allPatients">List of all Patients</string>
+
+    <string name="demo.phone">017112233445</string>
+    <string name="demo.sex">Male</string>
+    <string name="demo.dob">30/12/1991</string>
 </resources>
