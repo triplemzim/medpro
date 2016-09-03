@@ -30,6 +30,7 @@ proguard/
 .navigation/
 .idea/
 com_crashlytics_export_string.xml
+crashlytics-build.properties
 
 
 # Android Studio captures folder
@@ -91,3 +92,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
