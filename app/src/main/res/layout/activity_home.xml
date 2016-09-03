@@ -8,5 +8,64 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.genericslab.medpro.ui.HomeActivity">
+    <ImageView
+        android:id="@+id/MedproLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/medpro_logo"
+        />
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MedproLogo"
+        android:id="@+id/EditTextUsername"
+        android:hint="@string/hint.enterUsername"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EditTextUsername"
+        android:id="@+id/EditTextPassword"
+        android:hint="@string/hint.enterPassword"
+        android:inputType="number"/>
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EditTextPassword"
+        android:id="@+id/ButtonLogin"
+        android:text="@string/label.login"
+        android:background="@color/primary"
+        />
+    <TextView
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonLogin"
+        android:id="@+id/RegisterPrompt"
+        android:text="@string/prompt.register"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/RegisterPrompt"
+        android:id="@+id/ButtonRegisterDoctor"
+        android:text="@string/label.registerNewDoctor"
+        android:background="@color/material.core.lime"
+        />
 
 </RelativeLayout>
