@@ -24,6 +24,7 @@ import org.androidannotations.annotations.Trace;
 @EActivity(R.layout.activity_main)
 public class MainActivity extends CoreActivity {
 
+    // manual storage permission for API level 23+
     protected final String TRACE_TAG = Config.TRACE_TAG + "MainActivity";
 
     patient p=new patient();
