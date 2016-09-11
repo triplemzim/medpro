@@ -1,12 +1,15 @@
 package com.genericslab.medpro.login;
 
 
+import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.widget.Toast;
 
 import com.genericslab.droidplate.CoreFragment;
 import com.genericslab.droidplate.ui.drawer.DrawerActivity_;
 import com.genericslab.medpro.R;
+import com.genericslab.medpro.ui.HomeActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -31,6 +34,7 @@ public class LoginFragment extends CoreFragment {
 
     @AfterViews
     void afterViews() {
+
         loginView.setListener(new MaterialLoginViewListener() {
             @Override
             public void onRegister(TextInputLayout registerUser, TextInputLayout registerPass, TextInputLayout registerPassRep) {

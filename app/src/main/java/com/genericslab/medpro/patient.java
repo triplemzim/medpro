@@ -7,12 +7,12 @@ import com.orm.SugarRecord;
  */
 public class patient extends SugarRecord {
     String name,sex,phone,history;
-    int id;
+
     public patient(){
 
     }
-    public patient(int id,String name, String sex, String phone, String history){
-        this.id = id;
+    public patient(String name, String sex, String phone, String history){
+
         this.name = name;
         this.sex = sex;
         this.phone = phone;
