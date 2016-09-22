@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.genericslab.medpro">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
 
         android:name="com.orm.SugarApp"
@@ -14,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="name">
+
         <meta-data
             android:name="DATABASE"
             android:value="patients.db"></meta-data>
@@ -23,6 +26,9 @@
         <meta-data
             android:name="QUERY_LOG"
             android:value="true"></meta-data>
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.genericslab.medpro"></meta-data>
 
         <activity
             android:name=".ui.MainActivity_"
@@ -35,5 +41,6 @@
         </activity>
         <activity android:name=".ui.HomeActivity_"></activity>
     </application>
+
 
 </manifest>

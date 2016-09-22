@@ -21,8 +21,9 @@ import org.androidannotations.annotations.Trace;
 /**
  * Created by shahab on 7/5/16.
  */
-@EActivity(R.layout.activity_main)
+@EActivity(R.layout.activity_home)
 public class MainActivity extends CoreActivity {
+
 
     // manual storage permission for API level 23+
     protected final String TRACE_TAG = Config.TRACE_TAG + "MainActivity";
@@ -53,20 +54,27 @@ public class MainActivity extends CoreActivity {
     public void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
+
     }
 
     @Trace(tag = TRACE_TAG)
     @AfterViews
     void afterViews() {
+        verifyStoragePermissions(MainActivity.this);
         Toast.makeText(MainActivity.this, "First Toast", Toast.LENGTH_SHORT).show();
        // Intent intent = new Intent(this, HomeActivity.class);
         p = new patient("zim","male","67348","This patient is from Bogra and has a fibroid in stomach");
-        verifyStoragePermissions(MainActivity.this);
-        p.save();
+
+
 
         //patient g = patient.findById(patient.class,1);
         //Toast.makeText(MainActivity.this,"patient= ",Toast.LENGTH_LONG).show();
        // startActivity(intent);
-        loadFragment(LoginFragment_.builder().build());
+        //loadFragment(LoginFragment_.builder().build());
+        p.save();
+
+        patient ret = patient.findById(patient.class,1);
+
+        Toast.makeText(MainActivity.this, ret.name+" "+ret.history, Toast.LENGTH_LONG).show();
     }
 }

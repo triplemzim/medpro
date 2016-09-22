@@ -6,7 +6,7 @@ import com.orm.SugarRecord;
  * Created by Zim on 9/10/2016.
  */
 public class patient extends SugarRecord {
-    String name,sex,phone,history;
+    public String name,sex,phone,history;
 
     public patient(){
 
