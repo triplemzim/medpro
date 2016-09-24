@@ -40,7 +40,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.HomeActivity_"></activity>
-        <activity android:name=".ui.PatientSearchActivity"></activity>
+        <activity android:name=".ui.PatientSearchActivity_"></activity>
+        <activity android:name=".ui.AllPatientsActivity_"></activity>
     </application>
 
 

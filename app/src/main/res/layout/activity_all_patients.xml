@@ -13,7 +13,7 @@
 
     <ListView
         android:id="@+id/patientList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_width="362dp"
+        android:layout_height="486dp"></ListView>
 
 </LinearLayout>

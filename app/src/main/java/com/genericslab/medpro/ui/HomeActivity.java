@@ -55,6 +55,7 @@ public class HomeActivity extends Activity {
         if(doc.size()>=1){
             Toast.makeText(HomeActivity.this, "Welcome, "+doc.get(0).name, Toast.LENGTH_LONG).show();
             Password.setText("");
+            PatientSearchActivity_.intent(HomeActivity.this).start();
 
         }
         else{

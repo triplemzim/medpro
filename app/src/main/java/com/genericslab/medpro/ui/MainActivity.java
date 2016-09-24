@@ -73,11 +73,13 @@ public class MainActivity extends CoreActivity {
 //        doc.save();
 //        doc = new Doctor("Dr. Tiru","tiru","1234");
 //        doc.save();
-
+//        p = new patient("Zim","male","67348","This patient is from Bogra and has a fibroid in stomach");
+//        p.save();
+//        p = new patient("Anik","male","01521490242","This patient is from Bogra and has a bald head");
+//        p.save();
 
         HomeActivity_.intent(MainActivity.this).start();
 
-       // p = new patient("zim","male","67348","This patient is from Bogra and has a fibroid in stomach");
 
 
 
