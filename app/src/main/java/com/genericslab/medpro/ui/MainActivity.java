@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.config.Config;
+import com.genericslab.medpro.Doctor;
 import com.genericslab.medpro.R;
 import com.genericslab.medpro.login.LoginFragment_;
 import com.genericslab.medpro.patient;
@@ -21,13 +22,14 @@ import org.androidannotations.annotations.Trace;
 /**
  * Created by shahab on 7/5/16.
  */
-@EActivity(R.layout.activity_home)
+@EActivity(R.layout.activity_main)
 public class MainActivity extends CoreActivity {
 
 
     // manual storage permission for API level 23+
     protected final String TRACE_TAG = Config.TRACE_TAG + "MainActivity";
 
+    Doctor doc=new Doctor();
     patient p=new patient();
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -62,8 +64,20 @@ public class MainActivity extends CoreActivity {
     void afterViews() {
         verifyStoragePermissions(MainActivity.this);
         Toast.makeText(MainActivity.this, "First Toast", Toast.LENGTH_SHORT).show();
-       // Intent intent = new Intent(this, HomeActivity.class);
-        p = new patient("zim","male","67348","This patient is from Bogra and has a fibroid in stomach");
+
+
+
+//        doc = new Doctor("Dr. Ferdous","Feru","1234");
+//        doc.save();
+//        doc = new Doctor("Dr. Sarah","sarah","1234");
+//        doc.save();
+//        doc = new Doctor("Dr. Tiru","tiru","1234");
+//        doc.save();
+
+
+        HomeActivity_.intent(MainActivity.this).start();
+
+       // p = new patient("zim","male","67348","This patient is from Bogra and has a fibroid in stomach");
 
 
 
@@ -71,10 +85,10 @@ public class MainActivity extends CoreActivity {
         //Toast.makeText(MainActivity.this,"patient= ",Toast.LENGTH_LONG).show();
        // startActivity(intent);
         //loadFragment(LoginFragment_.builder().build());
-        p.save();
+       // p.save();
 
-        patient ret = patient.findById(patient.class,1);
+       // patient ret = patient.findById(patient.class,1);
 
-        Toast.makeText(MainActivity.this, ret.name+" "+ret.history, Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivity.this, ret.name+" "+ret.history, Toast.LENGTH_LONG).show();
     }
 }
